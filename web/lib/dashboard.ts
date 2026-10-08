@@ -76,15 +76,15 @@ export const replays: { playerId: string; events: ReplayEvent[] }[] = [
 ];
 
 export const navItems = [
-  { href: "/dashboard", label: "Home", key: "home" },
-  { href: "/dashboard/players", label: "Players", key: "players" },
-  { href: "/dashboard/bans", label: "Bans", key: "bans" },
-  { href: "/dashboard/lookup", label: "Lookup", key: "lookup" },
-  { href: "/dashboard/map", label: "Map", key: "map" },
-  { href: "/dashboard/monitoring", label: "Monitoring", key: "monitoring" },
-  { href: "/dashboard/replay", label: "Replay", key: "replay" },
-  { href: "/dashboard/staff", label: "Staff", key: "staff" },
-  { href: "/dashboard/settings", label: "Settings", key: "settings" },
+  { href: "/", label: "Home", key: "home" },
+  { href: "/players", label: "Players", key: "players" },
+  { href: "/bans", label: "Bans", key: "bans" },
+  { href: "/lookup", label: "Lookup", key: "lookup" },
+  { href: "/map", label: "Map", key: "map" },
+  { href: "/monitoring", label: "Monitoring", key: "monitoring" },
+  { href: "/replay", label: "Replay", key: "replay" },
+  { href: "/staff", label: "Staff", key: "staff" },
+  { href: "/settings", label: "Settings", key: "settings" },
 ] as const;
 
 export type DashboardSection = (typeof navItems)[number]["key"];

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import { site } from "@/lib/content";
+import { DashboardShell } from "@/components/dashboard/Shell";
 import "./globals.css";
 
 const geist = Geist({
@@ -10,10 +10,10 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: site.title,
+    default: "Dashboard",
     template: "%s · DCAC",
   },
-  description: site.description,
+  description: "DCAC staff dashboard for bans, players, and the live server.",
 };
 
 export default function RootLayout({
@@ -23,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geist.variable} bg-canvas font-sans antialiased`}>{children}</body>
+      <body className={`${geist.variable} bg-canvas font-sans antialiased`}>
+        <DashboardShell>{children}</DashboardShell>
+      </body>
     </html>
   );
 }
